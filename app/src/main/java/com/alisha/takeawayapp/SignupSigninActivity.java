@@ -16,13 +16,13 @@ import com.google.android.material.tabs.TabLayout;
 public class SignupSigninActivity extends AppCompatActivity {
     private TabAdapter adapter1, adapter2;
     private TabLayout tabLayout;
-    private ViewPager viewPager1, viewPager2;
+    private ViewPager  viewPager2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup_signin);
         getSupportActionBar().hide();
-        viewPager1 = (ViewPager) findViewById(R.id.viewPager1);
+//        viewPager1 = (ViewPager) findViewById(R.id.viewPager1);
         viewPager2 = (ViewPager) findViewById(R.id.viewPager2);
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
 

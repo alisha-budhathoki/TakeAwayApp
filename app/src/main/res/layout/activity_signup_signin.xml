@@ -6,13 +6,17 @@
     android:layout_height="match_parent"
     android:theme="@style/Theme.AppCompat.NoActionBar"
     android:orientation="vertical">
-    <androidx.viewpager.widget.ViewPager
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/viewPager1"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_150sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-    </androidx.viewpager.widget.ViewPager>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:background="@drawable/simg_sign"
+/>    </androidx.appcompat.widget.Toolbar>
     <com.google.android.material.tabs.TabLayout
     android:id="@+id/tabLayout"
     android:layout_width="match_parent"
@@ -21,7 +25,8 @@
     app:tabGravity="fill"
     app:tabIndicatorColor="@color/white"
     app:tabIndicatorHeight="4dp"
-    app:tabBackground="@color/colorPrimary"
+    app:tabBackground="@color/white"
+        app:tabTextColor="@color/black"
     app:tabMode="fixed"
         app:layout_constraintTop_toBottomOf="@+id/viewPager1"
         app:layout_constraintStart_toStartOf="parent"
