@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- First part is a gradient -->
+    <item android:left="0dp" android:right="0dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="20dip" />
+
+
+        </shape>
+    </item>
+    <!-- Second part is plain color. Slightly transparent -->
+    <item android:top="1sp" android:bottom="1sp" >
+        <shape android:shape="rectangle">
+            <corners android:radius="20dip" />
+            <solid android:color="@color/orange"/>
+        </shape>
+
+    </item>
+</layer-list>
