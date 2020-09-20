@@ -7,10 +7,6 @@ import android.os.Bundle;
 
 import com.alisha.takeawayapp.tabs.Tab1Fragment;
 import com.alisha.takeawayapp.tabs.Tab2Fragment;
-import com.alisha.takeawayapp.tabs.Tab3Fragment;
-import com.alisha.takeawayapp.tabs.Top3Fragment;
-import com.alisha.takeawayapp.tabs.TopTab2Fragment;
-import com.alisha.takeawayapp.tabs.TopTabFragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class SignupSigninActivity extends AppCompatActivity {
@@ -32,9 +28,9 @@ public class SignupSigninActivity extends AppCompatActivity {
 //        adapter1.addTopFragemnt(new Top3Fragment());
 
         adapter2 = new TabAdapter(getSupportFragmentManager());
-        adapter2.addFragment(new Tab1Fragment(), "Tab 1");
-        adapter2.addFragment(new Tab2Fragment(), "Tab 2");
-        adapter2.addFragment(new Tab3Fragment(), "Tab 3");
+        adapter2.addFragment(new Tab1Fragment(), "Sign In");
+        adapter2.addFragment(new Tab2Fragment(), "Sign Up");
+//        adapter2.addFragment(new Tab3Fragment(), "Tab 3");
         viewPager2.setAdapter(adapter2);
         tabLayout.setupWithViewPager(viewPager2);
 

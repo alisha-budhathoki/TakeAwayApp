@@ -3,12 +3,15 @@
     <string name="txt_welcom">Welcome to</string>
     <string name="txt_take_awy">Take Away</string>
     <string name="txt_hi">Hi!</string>
-    <string name="txt_uname">Username</string>
-    <string name="txt_pw">Password</string>
+    <string name="txt_uname">USERNAME</string>
+    <string name="txt_pw">PASSWORD</string>
+    <string name="txt_email">EMAIL</string>
+    <string name="txt_phone_no">MOBILE NUMBER</string>
     <string name="txt_keep">Keep me signed in </string>
     <string name="txt_sign_via">Sign in Via</string>
     <string name="forgot_pw">Forget Password</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
+    <string name="terms_nd_condtn"><b>Terms &amp; Conditions</b></string>
 
 </resources>

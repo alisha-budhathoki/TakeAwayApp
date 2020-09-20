@@ -13,10 +13,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <ImageView
+            android:id="@+id/imageDef"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_150sdp"
             android:background="@drawable/simg_sign"
-/>    </androidx.appcompat.widget.Toolbar>
+            android:scaleType="fitStart"
+    />
+    </androidx.appcompat.widget.Toolbar>
     <com.google.android.material.tabs.TabLayout
     android:id="@+id/tabLayout"
     android:layout_width="match_parent"
@@ -42,3 +45,5 @@
         >
     </androidx.viewpager.widget.ViewPager>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--Todo: Further tasks of carview and fragment adjusting-->
