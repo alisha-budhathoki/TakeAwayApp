@@ -5,8 +5,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
+import com.alisha.takeawayapp.tabs.FirstSignUp;
 import com.alisha.takeawayapp.tabs.Tab1Fragment;
-import com.alisha.takeawayapp.tabs.Tab2Fragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class SignupSigninActivity extends AppCompatActivity {
@@ -29,7 +29,7 @@ public class SignupSigninActivity extends AppCompatActivity {
 
         adapter2 = new TabAdapter(getSupportFragmentManager());
         adapter2.addFragment(new Tab1Fragment(), "Sign In");
-        adapter2.addFragment(new Tab2Fragment(), "Sign Up");
+        adapter2.addFragment(new FirstSignUp(), "Sign Up");
 //        adapter2.addFragment(new Tab3Fragment(), "Tab 3");
         viewPager2.setAdapter(adapter2);
         tabLayout.setupWithViewPager(viewPager2);

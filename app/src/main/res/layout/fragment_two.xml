@@ -2,16 +2,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <TextView
         android:id="@+id/txtr_uname"
         android:text="@string/txt_uname"
         style="@style/txtHint"
+        android:layout_marginTop="@dimen/_10sdp"
         android:drawableStart="@drawable/icon_email_address"
         android:drawablePadding="16dp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginLeft="@dimen/_30sdp"
         android:textColor="@color/lightGrey"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +20,6 @@
         android:id="@+id/edittxtr_uname"
         style="@style/Edittext"
         android:inputType="textEmailAddress"
-        android:layout_marginHorizontal="@dimen/_30sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtr_uname" />
@@ -33,17 +32,15 @@
         android:drawablePadding="16dp"
         android:layout_marginTop="@dimen/_10sdp"
         android:textColor="@color/lightGrey"
-        android:layout_marginLeft="@dimen/_30sdp"
         app:layout_constraintTop_toBottomOf="@+id/edittxtr_uname"
         app:layout_constraintStart_toStartOf="parent"
         />
     <EditText
         android:id="@+id/edittextr_em"
         style="@style/Edittext"
-        android:inputType="textPassword"
+        android:inputType="textEmailAddress"
         android:textColor="@color/lightGrey"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="@dimen/_30sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtr_em" />
 
@@ -55,17 +52,15 @@
         android:drawablePadding="16dp"
         android:layout_marginTop="@dimen/_10sdp"
         android:textColor="@color/lightGrey"
-        android:layout_marginLeft="@dimen/_30sdp"
         app:layout_constraintTop_toBottomOf="@+id/edittextr_em"
         app:layout_constraintStart_toStartOf="parent"
         />
     <EditText
         android:id="@+id/editext_phn"
         style="@style/Edittext"
-        android:inputType="textPassword"
+        android:inputType="phone"
         android:textColor="@color/lightGrey"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="@dimen/_30sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtr_phn" />
 
@@ -78,7 +73,6 @@
         android:drawablePadding="16dp"
         android:layout_marginTop="@dimen/_10sdp"
         android:textColor="@color/lightGrey"
-        android:layout_marginLeft="@dimen/_30sdp"
         app:layout_constraintTop_toBottomOf="@+id/editext_phn"
         app:layout_constraintStart_toStartOf="parent"
         />
@@ -88,13 +82,13 @@
         android:inputType="textPassword"
         android:textColor="@color/lightGrey"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="@dimen/_30sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtr_pw" />
     <CheckBox
         android:id="@+id/cbr_terms"
         style="@style/checkbox"
-        android:buttonTint="@color/orange"
+        app:buttonTint="@color/checkbox_filter_tint"
+        tools:targetApi="21"
         android:text="@string/terms_nd_condtn"
         android:textColor="@color/black"
         android:textSize="6pt"
@@ -108,7 +102,6 @@
         android:text="SIGN IN NOW"
         style="@style/buttonSign"
         android:layout_marginHorizontal="@dimen/_30sdp"
-        android:background="@drawable/layer_list"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cbr_terms"

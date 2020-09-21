@@ -13,6 +13,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:minHeight">40dp</item>
+        <item name="android:layout_marginHorizontal">@dimen/_15sdp</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">@font/gotham_medium</item>
         <item name="android:backgroundTint">@color/primaryGrey</item>
@@ -21,8 +22,17 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginHorizontal">@dimen/_15sdp</item>
         <item name="android:fontFamily">@font/gotham_medium</item>
        <item name="android:layout_marginLeft">@dimen/_4sdp</item>
+    </style>
+    <style name="txtBtn" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">@dimen/_130sdp</item>
+        <item name="android:layout_height">@dimen/_32sdp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/layer_list</item>
 
     </style>
 <style name="checkbox" parent="Widget.AppCompat.CompoundButton.CheckBox">
@@ -40,7 +50,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/_27sdp</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/layer_list</item>
         <item name="android:layout_marginHorizontal">@dimen/_20ssp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">@dimen/_15ssp</item>

@@ -13,5 +13,9 @@
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
     <string name="terms_nd_condtn"><b>Terms &amp; Conditions</b></string>
+    <string name="txt_usr">USER</string>
+    <string name="txt_drvr">DRIVER</string>
+    <string name="txt_or"><b>OR</b></string>
+
 
 </resources>
