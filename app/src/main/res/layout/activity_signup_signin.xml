@@ -23,17 +23,17 @@
     <com.google.android.material.tabs.TabLayout
     android:id="@+id/tabLayout"
     android:layout_width="match_parent"
-    android:layout_height="?actionBarSize"
-    android:minHeight="?actionBarSize"
+    android:layout_height="@dimen/_40sdp"
     app:tabGravity="fill"
-    app:tabIndicatorColor="@color/white"
+    app:tabIndicatorColor="@color/orange"
     app:tabIndicatorHeight="4dp"
-    app:tabBackground="@color/white"
-        app:tabTextColor="@color/black"
+    android:background="@color/white"
+    app:tabIndicator="@drawable/custom_indicator"
+    app:tabSelectedTextColor="@color/black"
+    app:tabTextColor="@color/primaryGrey"
     app:tabMode="fixed"
-        app:layout_constraintTop_toBottomOf="@+id/viewPager1"
-        app:layout_constraintStart_toStartOf="parent"
->
+    app:layout_constraintTop_toBottomOf="@+id/viewPager1"
+    app:layout_constraintStart_toStartOf="parent">
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
