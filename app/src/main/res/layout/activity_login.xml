@@ -7,127 +7,127 @@
     android:fillViewport="true"
     android:background="@color/white"
     android:theme="@style/Theme.AppCompat.NoActionBar"
-    tools:context=".LoginActivity">
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintEnd_toEndOf="parent">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    >
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:scrollbars="vertical">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:scrollbars="vertical">
 
-              <TextView
+            <TextView
                 android:id="@+id/txt_username"
                 android:text="@string/txt_uname"
-                  android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 style="@style/txtHint"
-                  android:drawableStart="@drawable/icon_email_address"
-                  android:drawablePadding="@dimen/_2sdp"
-                  android:textColor="@color/lightGrey"
+                android:drawableStart="@drawable/icon_email_address"
+                android:drawablePadding="@dimen/_2sdp"
+                android:textColor="@color/lightGrey"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 />
 
-                <EditText
-                    android:id="@+id/emailEdittextl"
-                    style="@style/Edittext"
-                    android:inputType="textEmailAddress"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txt_username" />
+            <EditText
+                android:id="@+id/emailEdittextl"
+                style="@style/Edittext"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_username" />
 
-                <TextView
-                    android:id="@+id/txt_password"
-                    android:text="@string/txt_pw"
-                    style="@style/txtHint"
-                    android:textColor="@color/lightGrey"
-                    app:layout_constraintTop_toBottomOf="@+id/emailEdittextl"
-                    app:layout_constraintStart_toStartOf="parent"
-                    />
+            <TextView
+                android:id="@+id/txt_password"
+                android:text="@string/txt_pw"
+                style="@style/txtHint"
+                android:textColor="@color/lightGrey"
+                app:layout_constraintTop_toBottomOf="@+id/emailEdittextl"
+                app:layout_constraintStart_toStartOf="parent"
+                />
 
-                <EditText
-                    android:id="@+id/passwordEditextl"
-                    style="@style/Edittext"
-                    android:inputType="textPassword"
-                    android:textColor="@color/lightGrey"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txt_password" />
+            <EditText
+                android:id="@+id/passwordEditextl"
+                style="@style/Edittext"
+                android:inputType="textPassword"
+                android:textColor="@color/lightGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_password" />
 
-                <CheckBox
-                    android:id="@+id/cb_terms"
-                   style="@style/checkbox"
-                    android:buttonTint="@color/orange"
-                    android:text="@string/txt_keep"
-                    android:textColor="@color/black"
-                    android:textSize="6pt"
-                    app:layout_constraintTop_toBottomOf="@id/passwordEditextl"
-                    app:layout_constraintStart_toStartOf="parent"
-                    />
-<Button
-    android:id="@+id/btn_signIN"
-    android:text="SIGN IN NOW"
-    style="@style/buttonSign"
-    android:textColor="@color/black"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/cb_terms"
-/>
-<TextView
-    android:id="@+id/signInVia"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/btn_signIN"
-    android:layout_marginTop="@dimen/_25ssp"
-    android:text="@string/txt_sign_via"
-    android:textStyle="bold"
-    android:textColor="@color/black"
-    />
-<ImageView
-    android:id="@+id/fbLogo"
-    style="@style/imageViewtyle"
-    app:layout_constraintTop_toBottomOf="@+id/signInVia"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toStartOf="@+id/weChatLogo"
-    android:src="@drawable/btn_facebook"
-    />
-                <ImageView
-                    android:id="@+id/weChatLogo"
-                    style="@style/imageViewtyle"
-                    app:layout_constraintTop_toBottomOf="@+id/signInVia"
-                    app:layout_constraintStart_toEndOf="@+id/fbLogo"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:src="@drawable/btn_facebook"
-                    />
-<TextView
-    android:id="@+id/forgotPw"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/forgot_pw"
-    android:textColor="@color/primaryGrey"
-    android:layout_marginTop="@dimen/_50sdp"
-    app:layout_constraintTop_toBottomOf="@+id/fbLogo"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toEndOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    android:layout_marginBottom="@dimen/_20sdp"
-></TextView>
+            <CheckBox
+                android:id="@+id/cb_terms"
+                style="@style/checkbox"
+                android:buttonTint="@color/orange"
+                android:text="@string/txt_keep"
+                android:textColor="@color/black"
+                android:textSize="6pt"
+                app:layout_constraintTop_toBottomOf="@id/passwordEditextl"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+            <Button
+                android:id="@+id/btn_signIN"
+                android:text="SIGN IN NOW"
+                style="@style/buttonSign"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cb_terms"
+                />
+            <TextView
+                android:id="@+id/signInVia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_signIN"
+                android:layout_marginTop="@dimen/_25ssp"
+                android:text="@string/txt_sign_via"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+            <ImageView
+                android:id="@+id/fbLogo"
+                style="@style/imageViewtyle"
+                app:layout_constraintTop_toBottomOf="@+id/signInVia"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/weChatLogo"
+                android:src="@drawable/btn_facebook"
+                />
+            <ImageView
+                android:id="@+id/weChatLogo"
+                style="@style/imageViewtyle"
+                app:layout_constraintTop_toBottomOf="@+id/signInVia"
+                app:layout_constraintStart_toEndOf="@+id/fbLogo"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/btn_facebook"
+                />
+            <TextView
+                android:id="@+id/forgotPw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_pw"
+                android:textColor="@color/primaryGrey"
+                android:layout_marginTop="@dimen/_50sdp"
+                app:layout_constraintTop_toBottomOf="@+id/fbLogo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                ></TextView>
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-</ScrollView>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
