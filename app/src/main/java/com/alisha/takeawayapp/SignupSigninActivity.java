@@ -1,6 +1,7 @@
 package com.alisha.takeawayapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
@@ -12,20 +13,17 @@ import com.google.android.material.tabs.TabLayout;
 public class SignupSigninActivity extends AppCompatActivity {
     private TabAdapter adapter1, adapter2;
     private TabLayout tabLayout;
-    private ViewPager  viewPager2;
+    private ViewPager viewPager2;
+    Toolbar top_img;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup_signin);
         getSupportActionBar().hide();
-//        viewPager1 = (ViewPager) findViewById(R.id.viewPager1);
         viewPager2 = (ViewPager) findViewById(R.id.viewPager2);
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
-
-//        adapter1 = new TabAdapter(getSupportFragmentManager());
-//        adapter1.addTopFragemnt(new TopTabFragment());
-//        adapter1.addTopFragemnt(new TopTab2Fragment());
-//        adapter1.addTopFragemnt(new Top3Fragment());
+        top_img = findViewById(R.id.toolbar_img);
 
         adapter2 = new TabAdapter(getSupportFragmentManager());
         adapter2.addFragment(new Tab1Fragment(), "Sign In");
@@ -33,23 +31,27 @@ public class SignupSigninActivity extends AppCompatActivity {
 //        adapter2.addFragment(new Tab3Fragment(), "Tab 3");
         viewPager2.setAdapter(adapter2);
         tabLayout.setupWithViewPager(viewPager2);
+        top_img.setBackgroundResource(R.drawable.img_sign_in);
 
-        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+        viewPager2.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                System.out.println("jndkjdssn");
-//                viewPager.setCurrentItem(tab.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
+            public void onPageScrolled(int i, float v, int i1) {
 
             }
 
             @Override
-            public void onTabReselected(TabLayout.Tab tab) {
+            public void onPageSelected(int i) {
+                if (i == 1)
+                    top_img.setBackgroundResource(R.drawable.img_sign);
+                else
+                    top_img.setBackgroundResource(R.drawable.img_sign_in);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int i) {
 
             }
         });
-}
+
+    }
 }
