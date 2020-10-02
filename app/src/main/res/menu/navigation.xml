@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:enabled="true"
+        android:icon="@drawable/btn_facebook"
+        android:title="home" />
+
+    <item
+        android:id="@+id/navigation_deal"
+        android:enabled="true"
+        android:icon="@drawable/btn_facebook"
+        android:title="deal" />
+
+    <item
+        android:id="@+id/navigation_wallet"
+        android:enabled="true"
+        android:icon="@drawable/btn_facebook"
+        android:title="wallet" />
+    <item
+        android:id="@+id/navigation_setting"
+        android:enabled="true"
+        android:icon="@drawable/btn_facebook"
+        android:title="setting" />
+    <item
+        android:id="@+id/navigation_profile"
+        android:enabled="true"
+        android:icon="@drawable/btn_facebook"
+        android:title="profile" />
+
+</menu>
