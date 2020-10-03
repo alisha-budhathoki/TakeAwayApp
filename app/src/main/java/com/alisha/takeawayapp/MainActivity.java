@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.alisha.takeawayapp.bottomNavItems.HomeFragment;
+import com.alisha.takeawayapp.bottomNavItems.OrderFragment;
+import com.alisha.takeawayapp.bottomNavItems.ProfileFragement;
+import com.alisha.takeawayapp.bottomNavItems.SettingFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,27 +22,33 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.base_main);
         bottomNavigation = findViewById(R.id.navigation);
-        BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener =
-                new BottomNavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                        switch (item.getItemId()) {
-                            case R.id.navigation_home:
-                                openFragment(new HomeFragment());
-                                return true;
-                            case R.id.navigation_order:
-                                openFragment(SmsFragment.newInstance("", ""));
-                                return true;
-                            case R.id.navigation_notifications:
-                                openFragment(NotificationFragment.newInstance("", ""));
-                                return true;
-                        }
-                        return false;
-                    }
-
-                };
-
+        bottomNavigation.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
+        openFragment(new HomeFragment());
     }
+    BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    switch (item.getItemId()) {
+                        case R.id.navigation_home:
+                            System.out.println("dssndj");
+                            openFragment(new HomeFragment());
+                            return true;
+                        case R.id.navigation_order:
+                            openFragment(new OrderFragment());
+                            return true;
+                        case R.id.navigation_setting:
+                            openFragment(new SettingFragment());
+                            return true;
+                        case R.id.navigation_profile:
+                            openFragment(new ProfileFragement());
+                            return true;
+                    }
+                    return false;
+                }
+
+            };
+
     public void openFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.container, fragment);
