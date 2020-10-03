@@ -8,16 +8,11 @@
         android:title="home" />
 
     <item
-        android:id="@+id/navigation_deal"
+        android:id="@+id/navigation_order"
         android:enabled="true"
         android:icon="@drawable/btn_facebook"
-        android:title="deal" />
+        android:title="order" />
 
-    <item
-        android:id="@+id/navigation_wallet"
-        android:enabled="true"
-        android:icon="@drawable/btn_facebook"
-        android:title="wallet" />
     <item
         android:id="@+id/navigation_setting"
         android:enabled="true"
