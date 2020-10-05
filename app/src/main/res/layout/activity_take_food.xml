@@ -6,4 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".TakeFoodActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/first_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerTakeFood"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/first_item"
+    />
 </androidx.constraintlayout.widget.ConstraintLayout>
