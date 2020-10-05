@@ -6,13 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".TakeFoodActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.glide.slider.library.SliderLayout
         android:id="@+id/first_item"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_200sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent">
+    </com.glide.slider.library.SliderLayout>
 <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/recyclerTakeFood"
     android:layout_width="match_parent"
