@@ -1,6 +1,7 @@
 package com.alisha.takeawayapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,10 +27,10 @@ public class TakeFoodActivity extends AppCompatActivity {
         setContentView(R.layout.activity_take_food);
         recyclerViewTakeFood = findViewById(R.id.recyclerTakeFood);
         mListTakeFood = seeFoods();
-        System.out.println("sndfdfd");
         takeFoodAdapter = new TakeFoodAdapter(mListTakeFood, context);
+        GridLayoutManager linearLayoutManager = new GridLayoutManager(this, 3);
         recyclerViewTakeFood.setAdapter(takeFoodAdapter);
-        recyclerViewTakeFood.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
+        recyclerViewTakeFood.setLayoutManager(linearLayoutManager);
 
     }
 
