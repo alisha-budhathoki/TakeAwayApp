@@ -19,6 +19,7 @@ TextView sdhd;
             @Override
             public void onClick(View v) {
                 CustomDialogClass cdd = new CustomDialogClass(TakeMartActivity.this);
+                cdd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 //                cdd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 cdd.show();
             }

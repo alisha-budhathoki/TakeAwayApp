@@ -6,12 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardElevation="4dp"
+    app:cardCornerRadius="@dimen/_10sdp"
     tools:ignore="ContentDescription">
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/bg_transparent_rounded"
     android:minWidth="25px"
     android:minHeight="25px">
 
@@ -22,7 +25,7 @@
         android:layout_height="@dimen/_10sdp"
         android:layout_alignParentRight="true"
         android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_15sdp"
         />
 <ImageView
     android:id="@+id/img_item"
@@ -39,7 +42,7 @@
         android:text="Quantity"
         android:textColor="@color/primaryGrey"
         android:layout_toRightOf="@id/img_item"
-        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_50sdp"
         android:layout_below="@+id/img_cross"
         android:layout_marginTop="@dimen/_30sdp"
 />
@@ -51,7 +54,6 @@
         android:layout_below="@+id/txt_qntity"
         android:layout_toRightOf="@id/img_item"
         android:layout_marginLeft="@dimen/_30sdp"
-        android:layout_marginRight="@dimen/_40sdp"
         android:gravity="center">
 
         <TextView
@@ -87,6 +89,7 @@
     android:layout_toRightOf="@id/img_item"
     android:layout_marginLeft="@dimen/_27sdp"
     android:layout_marginTop="@dimen/_5sdp"
+    android:elevation="50dp"
     android:text="Add to Cart"
     android:textSize="@dimen/_7ssp"
     android:padding="@dimen/_1sdp"
@@ -99,6 +102,7 @@
         style="@style/TextViewStyle"
         android:text="Description:"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:layout_below="@+id/add_cart"
         android:layout_marginLeft="@dimen/_30sdp"
         android:textSize="@dimen/_7ssp"/>
@@ -109,6 +113,7 @@
         style="@style/TextViewStyle"
         android:text="Fish Ball"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:layout_below="@+id/desc"
         android:layout_marginLeft="@dimen/_30sdp"
         android:textSize="@dimen/_9ssp"
@@ -122,6 +127,7 @@
         android:layout_below="@+id/desc_cntnt"
         android:layout_marginLeft="@dimen/_30sdp"
         android:textSize="@dimen/_9ssp"
+        android:textColor="@color/black"
         android:layout_marginTop="@dimen/_2sdp"
         />
 
@@ -135,8 +141,9 @@
         android:layout_marginLeft="@dimen/_30sdp"
         android:textSize="@dimen/_7ssp"
         android:padding="@dimen/_1sdp"
-        android:textColor="@color/white"
-        android:background="@drawable/layer_list"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:background="@drawable/grey_round"
         android:layout_marginBottom="@dimen/_50sdp"
         />
 </RelativeLayout>
