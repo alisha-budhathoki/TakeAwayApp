@@ -3,7 +3,7 @@
     <!-- First part is a gradient -->
     <item android:left="0dp" android:right="0dp">
         <shape android:shape="rectangle">
-            <corners android:radius="20dip" />
+            <corners android:radius="5dip" />
 
 
         </shape>

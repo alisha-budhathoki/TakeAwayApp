@@ -1,115 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="4dp"
+    tools:ignore="ContentDescription">
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:minWidth="25px"
-    android:minHeight="25px"
-    android:background="#ff80d8ff">
+    android:minHeight="25px">
+
+    <ImageView
+        android:id="@+id/img_cross"
+        android:background="@drawable/cross"
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        />
+<ImageView
+    android:id="@+id/img_item"
+    android:layout_width="@dimen/_80sdp"
+    android:layout_height="@dimen/_50sdp"
+    android:layout_below="@+id/img_cross"
+    android:background="@drawable/food_img"
+    android:layout_marginTop="@dimen/_30sdp"
+    android:layout_marginLeft="@dimen/_30sdp"/>
     <TextView
-        android:id="@+id/titleLogin"
-        android:layout_height="32dp"
-        android:layout_width="match_parent"
-        android:text="Login"
-        android:textSize="20dp"
-        android:textColor="#FFFFFF"
-        android:paddingTop="4dp"
-        android:background="#ff40c4ff"
-        android:typeface="sans"
-        android:textStyle="bold"
-        android:gravity="center" />
-    <TextView
-        android:id="@+id/lblUsername"
-        android:layout_below="@+id/titleLogin"
-        android:layout_height="25dp"
-        android:layout_width="170dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="20dp"
-        android:text="Username"
-        android:textColor="#000000"
-        android:textSize="14dp"
-        android:paddingLeft="5dp"
-        android:paddingTop="2dp"
-        android:typeface="sans" />
-    <EditText
-        android:inputType="textEmailAddress"
-        android:id="@+id/txtUsername"
-        android:layout_below="@+id/lblUsername"
-        android:layout_height="28dp"
-        android:layout_width="match_parent"
-        android:layout_marginLeft="20dp"
-        android:background="@drawable/layer_list"
-        android:hint="Username"
-        android:textColorHint="@android:color/darker_gray"
-        android:textColor="@android:color/black"
-        android:paddingLeft="5dp"
-        android:paddingTop="1dp"
-        android:textSize="14dp"
-        android:paddingBottom="1dp"
-        android:typeface="sans"
-        android:layout_marginRight="20dp" />
-    <TextView
-        android:id="@+id/lblPassword"
-        android:layout_below="@+id/txtUsername"
-        android:layout_height="25dp"
-        android:layout_width="170dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Password"
-        android:textColor="#000000"
-        android:textSize="14dp"
-        android:paddingLeft="5dp"
-        android:paddingTop="2dp"
-        android:typeface="sans" />
-    <EditText
-        android:id="@+id/txtPassword"
-        android:layout_below="@+id/lblPassword"
-        android:inputType="textPassword"
-        android:layout_height="28dp"
-        android:layout_width="match_parent"
-        android:layout_marginLeft="20dp"
-        android:background="@drawable/layer_list"
-        android:hint="Password"
-        android:textColorHint="@android:color/darker_gray"
-        android:textColor="@android:color/black"
-        android:paddingLeft="5dp"
-        android:paddingTop="1dp"
-        android:textSize="14dp"
-        android:paddingBottom="1dp"
-        android:typeface="sans"
-        android:layout_marginRight="20dp" />
-    <LinearLayout
-        android:id="@+id/linearLayoutBtns"
-        android:layout_below="@+id/txtPassword"
+        android:id="@+id/txt_qntity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp">
-        <Button
-            android:id="@+id/btnLoginLL"
-            android:layout_width="125dp"
-            android:layout_height="35dp"
-            android:textSize="14dp"
-            android:text="Login"
-            android:typeface="sans"
-            android:background="#ff0986be"
-            android:textColor="#ffffffff"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginBottom="5dp" />
-        <Button
-            android:id="@+id/btnClearLL"
-            android:layout_width="125dp"
-            android:layout_height="35dp"
-            android:textSize="14dp"
-            android:text="Cancel"
-            android:typeface="sans"
-            android:background="#ff0986be"
-            android:layout_marginLeft="5dp"
-            android:textColor="#ffffffff"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginBottom="5dp" />
+        android:text="Quantity"
+        android:textColor="@color/primaryGrey"
+        android:layout_toRightOf="@id/img_item"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_below="@+id/img_cross"
+        android:layout_marginTop="@dimen/_30sdp"
+/>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_qntity"
+        android:layout_toRightOf="@id/img_item"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_40sdp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/itemAdd"
+            style="@style/TextViewStyle"
+            android:padding="8dp"
+            android:text="+"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/itemQty"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="wrap_content"             android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@color/lightGrey"
+            android:text="0"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/itemMinus"
+            style="@style/TextViewStyle"
+            android:padding="8dp"
+            android:text="-"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
     </LinearLayout>
+<Button
+    android:id="@+id/add_cart"
+    android:layout_width="@dimen/_80sdp"
+    android:layout_height="@dimen/_20sdp"
+    android:layout_below="@+id/linear"
+    android:layout_toRightOf="@id/img_item"
+    android:layout_marginLeft="@dimen/_27sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:text="Add to Cart"
+    android:textSize="@dimen/_7ssp"
+    android:padding="@dimen/_1sdp"
+    android:textColor="@color/white"
+    android:background="@drawable/layer_list"
+    />
+
+    <TextView
+        android:id="@+id/desc"
+        style="@style/TextViewStyle"
+        android:text="Description:"
+        android:textStyle="bold"
+        android:layout_below="@+id/add_cart"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:textSize="@dimen/_7ssp"/>
+
+
+    <TextView
+        android:id="@+id/desc_cntnt"
+        style="@style/TextViewStyle"
+        android:text="Fish Ball"
+        android:textStyle="bold"
+        android:layout_below="@+id/desc"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:textSize="@dimen/_9ssp"
+        android:layout_marginTop="@dimen/_2sdp"
+        />
+    <TextView
+        android:id="@+id/txt_prc"
+        style="@style/TextViewStyle"
+        android:text="E 5.00"
+        android:textStyle="bold"
+        android:layout_below="@+id/desc_cntnt"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:textSize="@dimen/_9ssp"
+        android:layout_marginTop="@dimen/_2sdp"
+        />
+
+    <Button
+        android:id="@+id/txt_no"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_below="@+id/txt_prc"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:text="3pcs"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:textSize="@dimen/_7ssp"
+        android:padding="@dimen/_1sdp"
+        android:textColor="@color/white"
+        android:background="@drawable/layer_list"
+        android:layout_marginBottom="@dimen/_50sdp"
+        />
 </RelativeLayout>
+</androidx.cardview.widget.CardView>
