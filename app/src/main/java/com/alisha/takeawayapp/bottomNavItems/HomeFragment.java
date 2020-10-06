@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.alisha.takeawayapp.R;
 import com.alisha.takeawayapp.TakeFoodActivity;
+import com.alisha.takeawayapp.TakeMartActivity;
 
 public class HomeFragment extends Fragment {
     FrameLayout takeFood, takeMart, takeSend;
@@ -30,6 +31,14 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), TakeFoodActivity.class);
 //        intent.putExtra(CommonConstants.INTENT_EXTRA_MERCHANT_TYPE, CommonConstants.DEAL_TYPE_TAKE_FOOD);
+                startActivity(intent);
+            }
+        });
+
+        takeMart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), TakeMartActivity.class);
                 startActivity(intent);
             }
         });
