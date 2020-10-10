@@ -1,6 +1,8 @@
 package com.alisha.takeawayapp.bottomNavItems;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.alisha.takeawayapp.CustomDialogClass;
 import com.alisha.takeawayapp.R;
 import com.alisha.takeawayapp.TakeFoodActivity;
 import com.alisha.takeawayapp.TakeMartActivity;
@@ -38,6 +41,10 @@ public class HomeFragment extends Fragment {
         takeMart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                CustomDialogClass cdd = new CustomDialogClass(getActivity());
+//                cdd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+////                cdd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+//                cdd.show();
                 Intent intent = new Intent(getActivity(), TakeMartActivity.class);
                 startActivity(intent);
             }

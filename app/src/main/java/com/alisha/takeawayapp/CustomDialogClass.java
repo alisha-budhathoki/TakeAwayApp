@@ -31,6 +31,7 @@ public class CustomDialogClass extends Dialog {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        System.out.println("dnsdsda");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.popup_take_mart);
             crossImg = findViewById(R.id.img_cross);
