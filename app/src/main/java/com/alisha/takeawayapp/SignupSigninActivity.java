@@ -2,19 +2,24 @@ package com.alisha.takeawayapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.ViewGroup;
 
 import com.alisha.takeawayapp.tabs.FirstSignUp;
 import com.alisha.takeawayapp.tabs.Tab1Fragment;
 import com.google.android.material.tabs.TabLayout;
+
+import static com.alisha.takeawayapp.R.drawable.tab_backgroung;
 
 public class SignupSigninActivity extends AppCompatActivity {
     private TabAdapter adapter1, adapter2;
     private TabLayout tabLayout;
     private ViewPager viewPager2;
     Toolbar top_img;
+    TabLayout getTabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +46,16 @@ public class SignupSigninActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int i) {
-                if (i == 1)
+                System.out.println("sdks");
+                ViewGroup.LayoutParams params = tabLayout.getLayoutParams();
+                if (i == 1) {
+//                    params.height = 180;
                     top_img.setBackgroundResource(R.drawable.img_sign);
-                else
+                }
+                else{
+//                    params.height = 100;
                     top_img.setBackgroundResource(R.drawable.img_sign_in);
+                }
             }
 
             @Override
