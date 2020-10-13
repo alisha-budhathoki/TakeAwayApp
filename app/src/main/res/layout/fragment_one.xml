@@ -7,11 +7,12 @@
     android:layout_centerInParent="true"
     android:background="@color/white"
     android:textSize="36sp" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="snjrwer"
-        android:gravity="center"
+        android:gravity="center_vertical"
+        android:background="@drawable/curv_bckgrnd"
         />
 
 </RelativeLayout>
