@@ -13,6 +13,7 @@
         <activity android:name=".TakeFoodActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".TabsCollection" />
+        <activity android:name=".bottomNavItems.Confirm" />
         <activity android:name=".SignupSigninActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

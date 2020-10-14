@@ -26,7 +26,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
-    <TextView
+    <Button
         android:id="@+id/tv_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,8 +35,9 @@
         app:layout_constraintEnd_toStartOf="@+id/tv_2"
         android:text="Take water"
         android:background="@drawable/layer_list"
+        android:textColor="@color/white"
         />
-    <TextView
+    <Button
         android:id="@+id/tv_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,6 +45,20 @@
         app:layout_constraintStart_toEndOf="@+id/tv_1"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Take food"
+        android:textColor="@color/white"
         android:background="@drawable/layer_list"
+        />
+
+    <Button
+        android:id="@+id/sendBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Send"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:backgroundTint="@color/primaryGrey"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
