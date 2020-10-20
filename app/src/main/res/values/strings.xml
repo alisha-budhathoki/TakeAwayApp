@@ -16,6 +16,7 @@
     <string name="txt_usr">USER</string>
     <string name="txt_drvr">DRIVER</string>
     <string name="txt_or"><b>OR</b></string>
+    <string name="badReviewTxt"><b>You insist want to give a bad review?</b></string>
 
 
 </resources>

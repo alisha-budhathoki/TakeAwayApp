@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp">
+
+        <LinearLayout
+            android:layout_marginTop="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rate the driver"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+
+            <RatingBar
+                android:id="@+id/ratingBarCustom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:maxHeight="50dp"
+                style="@style/Widget.MaterialRatingBar.RatingBar"
+                android:progressDrawable="@drawable/rating_selector"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:numStars="5"/>
+
+            <EditText
+                style="@style/Edittext"
+                android:id="@+id/tv_review"
+                android:layout_height="200dp"
+                android:hint="Enter review"
+                android:gravity="top"
+                android:layout_marginTop="40dp"
+                android:padding="8dp"
+                android:textSize="12sp"
+                android:inputType="textMultiLine"/>
+            <TextView
+                android:id="@+id/badReview"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/badReviewTxt"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/gotham_medium"
+                />
+
+            <Button
+                android:id="@+id/btn_submit"
+                style="@style/buttonSign"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:text="Submit"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

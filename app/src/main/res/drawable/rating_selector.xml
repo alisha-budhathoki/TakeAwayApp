@@ -1,0 +1,15 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@android:id/background"
+        android:drawable="@drawable/btn_rating_unactiveh"
+        android:bottom="7dp"/>
+
+    <item android:id="@android:id/secondaryProgress"
+        android:drawable="@drawable/btn_rating_unactiveh"
+        android:bottom="7dp"/>
+
+    <item android:id="@android:id/progress"
+        android:drawable="@drawable/btn_ratingh"
+        android:bottom="7dp"/>
+
+</layer-list>
