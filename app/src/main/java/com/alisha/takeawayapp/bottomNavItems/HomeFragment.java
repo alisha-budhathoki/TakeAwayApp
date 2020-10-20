@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.alisha.takeawayapp.CopyText;
 import com.alisha.takeawayapp.CustomDialogClass;
 import com.alisha.takeawayapp.CustomRating;
 import com.alisha.takeawayapp.R;
@@ -51,6 +52,14 @@ public class HomeFragment extends Fragment {
 //                cdd.show();
 //                Intent intent = new Intent(getActivity(), TakeMartActivity.class);
 //                startActivity(intent);
+            }
+        });
+        takeSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getActivity(), CopyText.class);
+                startActivity(intent);
             }
         });
 
