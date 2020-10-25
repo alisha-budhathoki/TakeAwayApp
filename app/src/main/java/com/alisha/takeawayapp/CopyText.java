@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class CopyText extends AppCompatActivity {
     EditText enteredText;
@@ -36,6 +37,7 @@ public class CopyText extends AppCompatActivity {
             ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
             ClipData clip = ClipData.newPlainText("label","Your Text");
             clipboard.setPrimaryClip(clip);
+            Toast.makeText(getApplicationContext(), "Text copied to clipboard", Toast.LENGTH_SHORT);
         }
     });
     }}

@@ -2,12 +2,15 @@ package com.alisha.takeawayapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.CalendarContract;
+import android.view.View;
+import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -74,6 +77,14 @@ public class CustomRating extends AppCompatActivity {
         // Second rating bar is customized.
         final RatingBar ratingBarCustom = (RatingBar)findViewById(R.id.ratingBarCustom);
         TextView tvBabReview = findViewById(R.id.badReview);
+        Button btnContinue = findViewById(R.id.btn_submit);
+        btnContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =  new Intent(CustomRating.this, UploadPicture.class);
+                startActivity(intent);
+            }
+        });
         tvBabReview.setPaintFlags(tvBabReview.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         ratingBarCustom.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
