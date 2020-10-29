@@ -29,6 +29,26 @@
         android:layout_below="@+id/button"
         android:layout_margin="@dimen/_20sdp"
         />
+    <Button
+        android:id="@+id/buttonChange"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_below="@+id/imageView"
+        android:text="Change Stroke Color"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_below="@+id/buttonChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView "
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/stroke_background"
+        />
 
 </RelativeLayout>
 

@@ -6,20 +6,26 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class UploadPicture extends AppCompatActivity {
     private static final int SELECTED_PIC = 1;
     ImageView imageView;
+    Button button;
+    TextView textView;
 //    Context context;
 
     @Override
@@ -27,6 +33,21 @@ public class UploadPicture extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_picture);
         imageView = (ImageView) findViewById(R.id.imageView);
+        textView=findViewById(R.id.text);
+        button=findViewById(R.id.buttonChange);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //To change the stroke color
+                GradientDrawable myGrad = (GradientDrawable)textView.getBackground();
+                myGrad.setStroke(convertDpToPx(3), Color.RED);
+            }
+        });
+
+    }
+    private int convertDpToPx(int dp){
+        return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
